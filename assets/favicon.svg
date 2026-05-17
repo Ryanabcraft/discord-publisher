@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Discord Publisher">
+  <rect width="64" height="64" rx="14" fill="#5865f2"/>
+  <path d="M18 24c6-4 22-4 28 0 3 6 4 13 2 22-6 4-26 4-32 0-2-9-1-16 2-22Z" fill="#fff"/>
+  <circle cx="26" cy="35" r="3" fill="#101116"/>
+  <circle cx="38" cy="35" r="3" fill="#101116"/>
+  <path d="M25 43c5 2 9 2 14 0" fill="none" stroke="#101116" stroke-width="3" stroke-linecap="round"/>
+  <path d="M18 25l-4-7M46 25l4-7" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+</svg>

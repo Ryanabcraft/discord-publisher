@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Discord Publisher Ã© um plugin para Codex que prepara, revisa e publica anÃºncios no Discord usando webhooks oficiais."
+    />
+    <meta property="og:title" content="Discord Publisher" />
+    <meta
+      property="og:description"
+      content="Preview primeiro. PublicaÃ§Ã£o sÃ³ com aprovaÃ§Ã£o."
+    />
+    <meta property="og:type" content="website" />
+    <title>Discord Publisher - Plugin para Codex</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="Discord Publisher inÃ­cio">
+        <img src="assets/favicon.svg" alt="" />
+        <span>Discord Publisher</span>
+      </a>
+      <nav aria-label="NavegaÃ§Ã£o principal">
+        <a href="#install">Instalar</a>
+        <a href="#webhook">Webhook</a>
+        <a href="#publish">Publicar</a>
+        <a href="https://github.com/Ryanabcraft/discord-publisher-marketplace" target="_blank" rel="noreferrer">GitHub</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Codex plugin + Discord webhook</p>
+          <h1>Seu anÃºncio no Discord, revisado antes de sair.</h1>
+          <p class="lead">
+            Discord Publisher ajuda o Codex a escrever mensagens de lanÃ§amento,
+            mostrar uma prÃ©via e publicar no canal certo por webhook oficial,
+            sÃ³ depois da sua aprovaÃ§Ã£o.
+          </p>
+          <div class="actions">
+            <a class="button primary" href="#install">Instalar</a>
+            <a class="button secondary" href="#webhook">Criar webhook</a>
+          </div>
+        </div>
+
+        <div class="discord-panel" aria-label="PrÃ©via do Discord Publisher">
+          <div class="panel-top">
+            <span># lanÃ§amentos</span>
+            <strong>preview</strong>
+          </div>
+          <div class="message">
+            <div class="avatar">DP</div>
+            <div>
+              <strong>Discord Publisher</strong>
+              <p>Project Doctor estÃ¡ no ar: https://ryanabcraft.github.io/doctor/</p>
+              <div class="embed">
+                <span>Preview mode</span>
+                <h3>Sem -Publish, nada Ã© enviado.</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="feature-strip">
+        <article>
+          <span>01</span>
+          <strong>Escreve</strong>
+          <p>Gera anÃºncio claro para servidor, canal ou comunidade.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <strong>Mostra prÃ©via</strong>
+          <p>Exibe conteÃºdo, nome do webhook e embed antes de publicar.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <strong>Publica</strong>
+          <p>Envia via incoming webhook oficial do Discord.</p>
+        </article>
+      </section>
+
+      <section id="install" class="section split">
+        <div>
+          <p class="eyebrow">InstalaÃ§Ã£o</p>
+          <h2>Instale com um comando.</h2>
+          <p>
+            Cole no CMD ou PowerShell. O instalador adiciona o marketplace,
+            habilita o plugin e cria backup do <code>config.toml</code>.
+          </p>
+        </div>
+        <div class="code-panel">
+          <button class="copy" data-copy="install-code">Copiar</button>
+          <pre id="install-code"><code>powershell -c "irm https://ryanabcraft.github.io/discord-publisher/install.ps1|iex"</code></pre>
+        </div>
+      </section>
+
+      <section id="webhook" class="section guide">
+        <div>
+          <p class="eyebrow">Webhook</p>
+          <h2>Como conectar seu canal.</h2>
+          <p>
+            No Discord, abra as configuraÃ§Ãµes do canal, vÃ¡ em IntegraÃ§Ãµes,
+            crie um webhook e copie a URL. Depois salve sÃ³ no terminal.
+          </p>
+        </div>
+        <div class="steps">
+          <article>
+            <span>Canal</span>
+            <p>ConfiguraÃ§Ãµes do canal â†’ IntegraÃ§Ãµes â†’ Webhooks.</p>
+          </article>
+          <article>
+            <span>URL</span>
+            <p>Copie a URL do webhook e trate como segredo.</p>
+          </article>
+          <article>
+            <span>Env</span>
+            <p><code>$env:DISCORD_WEBHOOK_URL="https://discord.com/api/webhooks/..."</code></p>
+          </article>
+        </div>
+      </section>
+
+      <section id="publish" class="section split dark">
+        <div>
+          <p class="eyebrow">PublicaÃ§Ã£o</p>
+          <h2>Preview primeiro. Sempre.</h2>
+          <p>
+            O script nÃ£o publica nada sem <code>-Publish</code>. VocÃª revisa a
+            mensagem antes e sÃ³ entÃ£o autoriza o envio.
+          </p>
+          <a class="button primary dark-button" href="https://github.com/Ryanabcraft/discord-publisher-marketplace" target="_blank" rel="noreferrer">Abrir GitHub</a>
+        </div>
+        <div class="code-panel violet">
+          <button class="copy" data-copy="publish-code">Copiar</button>
+          <pre id="publish-code"><code>powershell -File C:\Users\Ryan\plugins\discord-publisher\scripts\send-discord.ps1 -Content "Project Doctor estÃ¡ no ar: https://ryanabcraft.github.io/doctor/" -Publish</code></pre>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>Discord Publisher</span>
+      <a href="https://discord.com/developers/docs/resources/webhook#execute-webhook" target="_blank" rel="noreferrer">Discord Webhook Docs</a>
+    </footer>
+
+    <div class="toast" role="status" aria-live="polite">Copiado.</div>
+    <script src="script.js"></script>
+  </body>
+</html>
