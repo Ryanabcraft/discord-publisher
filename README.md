@@ -1,13 +1,13 @@
 # Discord Publisher Site
 
-Site oficial do Discord Publisher, com instalaÃ§Ã£o, guia de webhook e link para o marketplace Git.
+Site oficial do Discord Publisher, com instalacao, guia de webhook e link para o marketplace Git.
 
-## InstalaÃ§Ã£o
+## Instalacao
 
 ```powershell
 powershell -c "irm https://ryanabcraft.github.io/discord-publisher/install.ps1|iex"
 ```
 
-## PublicaÃ§Ã£o
+## Publicacao
 
 Este site foi feito para GitHub Pages.
